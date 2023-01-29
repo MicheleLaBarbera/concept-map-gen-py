@@ -2,6 +2,6 @@
 
 #### Installation
 
-```http
+```
   pip install -r requirements.txt
 ```
