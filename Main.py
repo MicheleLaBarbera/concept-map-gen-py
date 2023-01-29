@@ -28,8 +28,13 @@ class Main:
       map = ConceptMap() # Create ConceptMap object
       map.generate(node_min, node_max) # Generate a random directed acyclic graph (DAG) with given parameters
       
+      # All of these prints are just for debug purposes
+      print("")
+      print(map.get_adjacency_matrix()) 
+      print("")
+      print("Nodes: " + str(map.get_nodes_count()) + " - Edges: " + str(map.get_edges_count()) + " - Entropy: " + str(map.get_entropy()))
+      
       map.draw() # Draw on screen the generated directed acyclic graph (DAG)
-      print(map.get_adjacency_matrix()) # Just for debug purposes
 
       self.maps.append(map) # Append the generated map in a maps list
       self.adjacency_matrix_list.append(map.get_adjacency_matrix()) # Append the adjacency matrix of the generated map in a adjacency matrix list
